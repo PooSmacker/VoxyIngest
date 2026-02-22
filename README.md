@@ -1,6 +1,6 @@
 # voxyingest
 
-a fabric mod that lets server admins send the entire world to a player's [voxy](https://github.com/cortex-mc/voxy) lod cache over the network. useful for pre populating lods on servers where players haven't explored yet.
+a fabric mod that lets server admins send the entire world to a player's [voxy](https://github.com/mcrcortex/voxy) lod cache over the network. useful for pre populating lods on servers where players haven't explored yet.
 
 ## usage
 
