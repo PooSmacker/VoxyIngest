@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "voxyingest",
+  "version": "${version}",
+  "name": "VoxyIngest",
+  "description": "Server-to-client world data transfer for Voxy. Allows admins to ingest world data into a player's Voxy cache via /voxyingest command.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/voxyingest/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.dripps.voxyingest.client.VoxyingestDataGenerator"
+    ],
+    "client": [
+      "com.dripps.voxyingest.client.VoxyingestClient"
+    ],
+    "main": [
+      "com.dripps.voxyingest.Voxyingest"
+    ]
+  },
+  "mixins": [
+    "voxyingest.mixins.json",
+    {
+      "config": "voxyingest.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "voxy": "*"
+  }
+}
